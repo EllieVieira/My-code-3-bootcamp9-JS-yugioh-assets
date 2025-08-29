@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/assets/favicon/Favicon.ico" type="image/x-icon">
 
-
+    <!-- Reset style -->
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <!-- main style -->
     <link rel="stylesheet" href="src/styles/main.css">
 
-    <!-- main style -->
-    <link rel="stylesheet" href="src/styles/reset.css">
 
     <!-- Framework -->
     <link rel="stylesheet" href="src/styles/containers_and_frames.css">
@@ -19,10 +20,14 @@
 
 <body>
 
+    <audio id="bgm" loop>
+        <source src="src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+
     <div class="bg-video">
         <video class="video" autoplay loop muted>
             <source src="src/assets/video/yugi.mp4" type="video/mp4">
-        </video>g 
+        </video>
     </div>
 
     <div class="container">
@@ -34,12 +39,11 @@
                 <img id="card-image">
             </div>
             <div class="card_details frame">
-                <p id="card-name">a</p>
-                <p id="card-type">a</p>
+                <p id="card-name">Seleciona</p>
+                <p id="card-type">uma carta</p>
             </div>
-
-
         </div>
+
         <div class="container__right">
             <div class="card-box__container">
                 <div class="card-box framed" id="computer-cards"></div>
@@ -57,17 +61,14 @@
                         </div>
                     </div>
                     <div class="versus-bottom">
-                        <button id="next-duel" class="rpgui-button" onclick="resetDuel()">GANHOU</button>
+                        <button id="next-duel" class="rpgui-button" style="display:none"></button>
                     </div>
                 </div>
+
                 <div class="card-box framed" id="player-cards"></div>
             </div>
         </div>
     </div>
-
-
-
-
 
     <script src="src/scripts/engine.js" defer></script>
 </body>
